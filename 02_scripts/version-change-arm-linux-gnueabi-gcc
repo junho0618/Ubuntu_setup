@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+# Copyright (C) 2013 Insignal
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+GCCVER=4.4
+
+[ $# -ne 0 ] && GCCVER=$1
+
+sudo ls -l > /dev/null
+
+cd /usr/bin
+
+echo "arm-linux-gnueabi version changer. Target version=$GCCVER"
+
+echo "ln -sf arm-linux-gnueabi-cpp-$GCCVER arm-linux-gnueabi-cpp"
+sudo ln -sf arm-linux-gnueabi-cpp-$GCCVER arm-linux-gnueabi-cpp
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabi-cpp --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabi-g++-$GCCVER arm-linux-gnueabi-g++"
+sudo ln -sf arm-linux-gnueabi-g++-$GCCVER arm-linux-gnueabi-g++
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabi-g++ --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabi-gcc-$GCCVER arm-linux-gnueabi-gcc"
+sudo ln -sf arm-linux-gnueabi-gcc-$GCCVER arm-linux-gnueabi-gcc
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabi-gcc --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabi-gcov-$GCCVER arm-linux-gnueabi-gcov"
+sudo ln -sf arm-linux-gnueabi-gcov-$GCCVER arm-linux-gnueabi-gcov
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabi-gcov --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabihf-cpp-$GCCVER arm-linux-gnueabihf-cpp"
+sudo ln -sf arm-linux-gnueabihf-cpp-$GCCVER arm-linux-gnueabihf-cpp
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabihf-cpp --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabihf-g++-$GCCVER arm-linux-gnueabihf-g++"
+sudo ln -sf arm-linux-gnueabihf-g++-$GCCVER arm-linux-gnueabihf-g++
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabihf-g++ --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabihf-gcc-$GCCVER arm-linux-gnueabihf-gcc"
+sudo ln -sf arm-linux-gnueabihf-gcc-$GCCVER arm-linux-gnueabihf-gcc
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabihf-gcc --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf arm-linux-gnueabihf-gcov-$GCCVER arm-linux-gnueabihf-gcov"
+sudo ln -sf arm-linux-gnueabihf-gcov-$GCCVER arm-linux-gnueabihf-gcov
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+arm-linux-gnueabihf-gcov --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+

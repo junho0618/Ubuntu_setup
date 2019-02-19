@@ -1,0 +1,276 @@
+#!/bin/bash
+#
+# Copyright (C) 2013 Insignal
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
+CL_LINE=${CL_GRN}"================================================================================"${CL_RST}
+
+idx_basepath=0
+idx_subpath=0
+idx_keyword=0
+idx_target=0
+idx_errchk=0
+
+function _addinfo_basepath() {
+for arg in "$@"
+do
+	BASEPATH[$idx_basepath]="$arg"
+	let "idx_basepath=${idx_basepath}+1"
+done
+}
+
+function _addinfo_subpath() {
+for arg in "$@"
+do
+	SUBPATH[$idx_subpath]="$arg"
+	let "idx_subpath=${idx_subpath}+1"
+done
+}
+
+function _addinfo_keyword() {
+for arg in "$@"
+do
+	KEYWORD[$idx_keyword]="$arg"
+	let "idx_keyword=${idx_keyword}+1"
+done
+}
+
+function _addinfo_target() {
+for arg in "$@"
+do
+	TARGET[$idx_target]="$arg"
+	let "idx_target=${idx_target}+1"
+done
+}
+
+function _addinfo_errchk() {
+for arg in "$@"
+do
+	ERRCHK[$idx_errchk]="$arg"
+	let "idx_errchk=${idx_errchk}+1"
+done
+}
+
+function _addinfo() {
+for key in $@
+do
+	case $key in
+	u-boot)
+		_addinfo_basepath "*u-boot*"
+		_addinfo_subpath "out"
+		# u-boot binary
+		_addinfo_keyword "u-boot*.bin"
+		_addinfo_target "bootloader"
+		_addinfo_errchk 1
+		;;
+	proprietary)
+		_addinfo_basepath "u-boot" "*android*"
+		_addinfo_subpath "out" "vendor/insignal/*/exynos*"
+		# bl1
+		_addinfo_keyword "*bl1*.bin"
+		_addinfo_target "fwbl1"
+		_addinfo_errchk 0
+		# bl2
+		_addinfo_keyword "*bl2*.bin"
+		_addinfo_target "bl2"
+		_addinfo_errchk 0
+		# tzsw
+		_addinfo_keyword "*tzsw*.bin"
+		_addinfo_target "tzsw"
+		_addinfo_errchk 0
+		;;
+	kernel)
+		_addinfo_basepath "*kernel*"
+		_addinfo_subpath "arch/arm/boot" "out/arch/arm/boot"
+		# kernel image
+		_addinfo_keyword "[uz]Image"
+		_addinfo_target "kernel"
+		_addinfo_errchk 1
+		;;
+	ramdisk)
+		_addinfo_basepath "*android*"
+		_addinfo_subpath "out/target/product/*"
+		# ramdisk
+		_addinfo_keyword "ramdisk*.img*"
+		_addinfo_target "ramdisk"
+		_addinfo_errchk 1
+		;;
+	system)
+		_addinfo_basepath "*android*"
+		_addinfo_subpath "out/target/product/*"
+		# system image
+		_addinfo_keyword "system*.img*"
+		_addinfo_target "system"
+		_addinfo_errchk 1
+		;;
+	recovery)
+		_addinfo_basepath "*android*"
+		_addinfo_subpath "out/target/product/*"
+		# recovery image
+		_addinfo_keyword "recovery*.img*"
+		_addinfo_target "recovery"
+		_addinfo_errchk 0
+		;;
+	esac
+done
+}
+
+function _filescan() {
+local keyword
+local files
+local token
+for basepath in "${BASEPATH[@]}"
+do
+	[ "${basepath}" == "." ] && continue;
+	[ ! -d "${basepath}" ] && continue;
+
+	for subpath in "${SUBPATH[@]}"
+	do
+		for filepath in ${basepath}/${subpath}
+		do
+			[ ! -d "${filepath}" ] && continue;
+			keyword=$(echo "${filepath}/$1" | sed -e 's/\/\//\//g')
+			for f in ${keyword};
+			do
+				[ "${f}" != "${keyword}" ] && \
+					files="${files}${f}::";
+			done
+		done
+	done
+
+	keyword=$(echo "${basepath}/$1" | sed -e 's/\/\//\//g')
+	for f in ${keyword};
+	do
+		[ "${f}" != "${keyword}" ] && \
+			files="${files}${f}::";
+	done
+done
+
+if [ -z "${files}" ]; then
+	for subpath in "${SUBPATH[@]}"
+	do
+		for filepath in ${subpath}
+		do
+			[ ! -d "${filepath}" ] && continue;
+			keyword=$(echo "${subpath}/$1" | sed -e 's/\/\//\//g')
+			for f in ${keyword};
+			do
+				[ "${f}" != "${keyword}" ] && \
+					files="${files}${f}::";
+			done
+		done
+	done
+fi
+
+if [ -z "${files}" ]; then
+	keyword=$(echo "$1" | sed -e 's/\/\//\//g')
+	for f in ${keyword};
+	do
+		[ "${f}" != "${keyword}" ] && \
+			files="${files}${f}::";
+	done
+fi
+
+FILES=( $(echo ${files} | sed -e 's/::/\n/g' | sort -u) )
+}
+
+function _filecheck() {
+local ret
+local file
+
+FILES=()
+_filescan "$1"
+[ ${#FILES[@]} -eq 0 ] && _filescan "*$1*"
+
+local idx
+local cnt
+idx=0
+cnt=0
+if [ ${#FILES[@]} -gt 1 ]; then
+	for file in ${FILES[@]}
+	do
+		echo -e ${CL_GRN}${cnt}". "${CL_RST}$(ls -l "${file}")
+		cnt=$(expr ${cnt} + 1)
+	done
+	read -p "Select file(default=0): " SELECT
+	SELECT=$(echo ${SELECT} | sed -e 's/[^0-9]*//g')
+	[ ! -z "${SELECT}" ] && [ ${SELECT} -le ${cnt} ] && idx=${SELECT}
+fi
+FILE="${FILES[${idx}]}"
+
+if [ ! -z "${FILE}" ]; then
+	ls -l ${FILE}
+	
+else
+	echo -e ${CL_RED}"File is not exist."${CL_RST}
+	return 1
+fi
+
+return ${ret}
+}
+
+function _fastboot() {
+local ret
+fastboot flash "$1" "${FILE}"
+ret=$?
+[ ${ret} -ne 0 ] && echo -e ${CL_RED}"fastboot failed."${CL_RST}
+return ${ret}
+}
+
+
+_addinfo ${ITEMS}
+if [ "$1" != "" ] && [ -d "$1" ]; then
+	_addinfo_basepath $@
+fi
+BASEPATH=( $(find ${BASEPATH[@]} -type d -maxdepth 0 -exec echo {} \; 2>/dev/null | sort -u) )
+echo "BASEPATH=${BASEPATH[@]}"
+echo "SUBPATH=${SUBPATH[@]}"
+echo "KEYWORD=${KEYWORD[@]}"
+echo "TARGET=${TARGET[@]}"
+echo "ERRCHK=${ERRCHK[@]}"
+cnt=0
+errcnt=0
+for key in "${KEYWORD[@]}"
+do
+	echo -e "${CL_LINE}"
+	echo -e "FASTBOOT: File check for ${CL_CYN}${TARGET[$cnt]}${CL_RST} part"
+	echo -e "${CL_LINE}"
+	_filecheck "$key"
+	RET=$?
+	[ ${ERRCHK[$cnt]} -ne 0 ] && [ ${RET} -ne 0 ] && let "errcnt = errcnt + 1"
+	echo -e "${CL_LINE}"
+	if [ ${RET} -eq 0 ]; then
+		_fastboot "${TARGET[$cnt]}"
+		RET=$?
+		[ ${RET} -ne 0 ] && break
+	fi
+	let "cnt = cnt + 1"
+done
+
+echo -e "${CL_LINE}"
+[ ${errcnt} -ne 0 ] && exit ${errcnt}
+
+fastboot reboot
+
+echo -e "${CL_LINE}"
+

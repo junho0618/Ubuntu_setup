@@ -1,0 +1,70 @@
+#!/bin/bash
+#
+# Copyright (C) 2013 Insignal
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+GCCVER=4.4
+
+[ $# -ne 0 ] && GCCVER=$1
+
+sudo ls -l > /dev/null
+
+cd /usr/bin
+
+echo "GCC version changer. Target version=$GCCVER"
+
+echo "ln -sf cpp-$GCCVER cpp"
+sudo ln -sf cpp-$GCCVER cpp
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+cpp --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf g++-$GCCVER g++"
+sudo ln -sf g++-$GCCVER g++
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+g++ --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf gcc-$GCCVER gcc"
+sudo ln -sf gcc-$GCCVER gcc
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+gcc --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf gcov-$GCCVER gcov"
+sudo ln -sf gcov-$GCCVER gcov
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+gcov --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf cpp-$GCCVER x86_64-linux-gnu-cpp"
+sudo ln -sf cpp-$GCCVER x86_64-linux-gnu-cpp
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+x86_64-linux-gnu-cpp --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf g++-$GCCVER x86_64-linux-gnu-g++"
+sudo ln -sf g++-$GCCVER x86_64-linux-gnu-g++
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+x86_64-linux-gnu-g++ --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+echo "ln -sf gcc-$GCCVER x86_64-linux-gnu-gcc"
+sudo ln -sf gcc-$GCCVER x86_64-linux-gnu-gcc
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+x86_64-linux-gnu-gcc --version | grep $GCCVER
+[ $? -ne 0 ] && echo "ERROR" && exit 1
+
+exit 0

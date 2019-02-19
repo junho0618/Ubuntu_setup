@@ -1,0 +1,55 @@
+[user]
+	email = junho0618@gitauto.com
+	name = juno
+
+[color]
+	ui = true
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
+[push]
+	default = simple
+
+[merge]
+	tool=bc3
+
+[mergetool]
+	prompt = false
+
+[diff]
+	tool=bc3
+	submodule = log
+
+[difftool "bc3"]
+	path=/usr/bin/bcompare
+
+[difftool]
+	prompt = false
+
+[core]
+	editor = vim
+	pager = less -x4
+	autocrlf = input
+	sshCommand = ssh -i ~/.ssh/id_rsa_example -F /dev/null
+
+[alias]
+    co = checkout
+    rb = rebase -i
+    st = status
+    cm = commit
+    pl = pull
+    ps = push
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+    ad = add
+    tg = tag -n
+    df = diff
+    br = branch
+#submodule	
+	sm = submodule
+	smf = submodule foreach
+#stash
+	ss = stash save -u
+	sl = stash list
+	sp = stash pop

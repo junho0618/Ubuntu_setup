@@ -1,0 +1,204 @@
+#!/bin/bash
+#
+# Copyright (C) 2013 Insignal
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+source $(dirname ${0})/adb-include.sh
+
+CL_WHT="\033[1m"
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
+RTC_SYS_DATE="/sys/class/rtc/rtc0/date"
+RTC_SYS_TIME="/sys/class/rtc/rtc0/time"
+CPU_SYS_PATH="/sys/devices/system/cpu"
+CPU_FREQ_MIN="cpufreq/cpuinfo_min_freq"
+CPU_FREQ_MAX="cpufreq/cpuinfo_max_freq"
+CPU_FREQ_CUR="cpufreq/scaling_cur_freq"
+TMU_SYS_PATH_LST=(
+"/sys/devices/platform/tmu/temperature"
+"/sys/devices/platform/exynos_tmu/temperature"
+"/sys/class/thermal/thermal_zone0/temp"
+)
+
+function adb_handler() {
+	CPUMAX=$(adb ${ADBOPT} shell "cat ${CPU_SYS_PATH}/possible" | sed -e 's/0-//' | sed -e 's/[\r\n]*$//g')
+	let "CPUMAX = CPUMAX + 1"
+	FREQMIN=$(adb ${ADBOPT} shell "cat ${CPU_SYS_PATH}/cpu0/${CPU_FREQ_MIN}" | sed -e 's/0-//' | sed -e 's/[\r\n]*$//g')
+	let "FREQMIN = FREQMIN / 1000"
+	FREQMAX=$(adb ${ADBOPT} shell "cat ${CPU_SYS_PATH}/cpu0/${CPU_FREQ_MAX}" | sed -e 's/0-//' | sed -e 's/[\r\n]*$//g')
+	let "FREQMAX = FREQMAX / 1000"
+
+	echo -e "CPUs = ${CPUMAX}, CPU Freq range = ${CL_BLU}${FREQMIN}${CL_RST}MHz ~ ${CL_RED}${FREQMAX}${CL_RST}MHz"
+
+	for tmupath in ${TMU_SYS_PATH_LST[@]}
+	do
+		ret=$(adb ${ADBOPT} shell "[ -e ${tmupath} ] && echo true")
+		[ ! -z "${ret}" ] && \
+			TMU_SYS_PATH="${tmupath}"
+	done
+
+	MNT_ROOT=$(adb ${ADBOPT} shell "mount" | grep "/root")
+	[ -z "${MNT_ROOT}" ] && adb ${ADBOPT} shell "mount -t tmpfs tmpfs /root"
+
+################################################################################
+	MNT_ROOT=$(adb ${ADBOPT} shell "mount" | grep "/root")
+	if [ ! -z "${MNT_ROOT}" ]; then
+
+		let "FREQSTEP = (FREQMAX - FREQMIN) / 4"
+		let "FREQSTEP1 = FREQMIN + FREQSTEP"
+		let "FREQSTEP2 = FREQSTEP1 + FREQSTEP"
+		let "FREQSTEP3 = FREQSTEP2 + FREQSTEP"
+		let "FREQSTEP4 = FREQSTEP3 + FREQSTEP"
+
+		echo -e "\
+Freq(MHz) step = 0: ~${CL_BLU}${FREQMIN}${CL_RST}, 1: ~${CL_CYN}${FREQSTEP1}${CL_RST}, 2: ~${CL_GRN}${FREQSTEP2}${CL_RST}, 3: ~${CL_YLW}${FREQSTEP3}${CL_RST}, 4: ${CL_RED}${FREQSTEP4}${CL_RST}~
+Temp(C) step = 0: ~${CL_BLU}40${CL_RST}, 1: ~${CL_CYN}60${CL_RST}, 2: ~${CL_GRN}80${CL_RST}, 3: ~${CL_YLW}100${CL_RST}, 4: ${CL_RED}100${CL_RST}~"
+
+if [ ! -z "${CPU_SYS_PATH}" ]; then
+		adb ${ADBOPT} shell 'echo "\
+#!/system/bin/sh
+FREQ_MSG=()
+for CPU in '${CPU_SYS_PATH}'/cpu[0-9]*; do
+	FREQ=\$(cat \$CPU/'${CPU_FREQ_CUR}') > /dev/null 2>&1
+	let \"FREQ = FREQ / 1000\"
+	if [ \${FREQ} -lt '${FREQSTEP1}' ]; then
+		FREQ_MSG=(\${FREQ_MSG[@]}\"'${CL_BLU}'\${FREQ}'${CL_RST}'\\\\t\")
+	else
+	if [ \${FREQ} -lt '${FREQSTEP2}' ]; then
+		FREQ_MSG=(\${FREQ_MSG[@]}\"'${CL_CYN}'\${FREQ}'${CL_RST}'\\\\t\")
+	else
+	if [ \${FREQ} -lt '${FREQSTEP3}' ]; then
+		FREQ_MSG=(\${FREQ_MSG[@]}\"'${CL_GRN}'\${FREQ}'${CL_RST}'\\\\t\")
+	else
+	if [ \${FREQ} -lt '${FREQSTEP4}' ]; then
+		FREQ_MSG=(\${FREQ_MSG[@]}\"'${CL_YLW}'\${FREQ}'${CL_RST}'\\\\t\")
+	else
+		FREQ_MSG=(\${FREQ_MSG[@]}\"'${CL_RED}'\${FREQ}'${CL_RST}'\\\\t\")
+	fi
+	fi
+	fi
+	fi
+done
+echo \"'${CL_WHT}'Freq(MHz):'${CL_RST}' \${FREQ_MSG[@]}\"
+" > /root/cpufreq'
+else
+		adb ${ADBOPT} shell 'echo "\
+#!/system/bin/sh
+echo \"'${CL_WHT}'Freq(MHz):'${CL_RST}' unknown\"
+" > /root/cpufreq'
+fi
+
+if [ ! -z "${TMU_SYS_PATH}" ]; then
+		adb ${ADBOPT} shell 'echo "\
+#!/system/bin/sh
+if [ ! -z \"'${TMU_SYS_PATH}'\" ]; then
+	TMU=\$(cat '${TMU_SYS_PATH}') > /dev/null 2>&1
+	[ \${TMU} -gt 1000 ] && let \"TMU = TMU / 1000\"
+	if [ \${TMU} -lt 40 ]; then
+		TMU_MSG=\"'${CL_BLU}'\${TMU}'${CL_RST}'\\\\t\"
+	else
+	if [ \${TMU} -lt 60 ]; then
+		TMU_MSG=\"'${CL_CYN}'\${TMU}'${CL_RST}'\\\\t\"
+	else
+	if [ \${TMU} -lt 80 ]; then
+		TMU_MSG=\"'${CL_GRN}'\${TMU}'${CL_RST}'\\\\t\"
+	else
+	if [ \${TMU} -lt 100 ]; then
+		TMU_MSG=\"'${CL_YLW}'\${TMU}'${CL_RST}'\\\\t\"
+	else
+		TMU_MSG=\"'${CL_RED}'\${TMU}'${CL_RST}'\\\\t\"
+	fi
+	fi
+	fi
+	fi
+fi
+echo \"'${CL_WHT}'Temp(C):'${CL_RST}' \${TMU_MSG}\"
+" > /root/cputemp'
+else
+		adb ${ADBOPT} shell 'echo "\
+#!/system/bin/sh
+echo \"'${CL_WHT}'Temp(C):'${CL_RST}' unknown\"
+" > /root/cputemp'
+fi
+
+		adb ${ADBOPT} shell 'echo "\
+while :; do
+DATETIME=\"\$(date +%m-%d\ \ %H:%M:%S)\"
+UPTIME=\"\$(cat /proc/uptime)\"
+UPTIME=\${UPTIME/ */}
+echo \"'${CL_YLW}'\${DATETIME}'${CL_RST}'  |  '${CL_WHT}'\${UPTIME}'${CL_RST}'\t  |  \$(sh /root/cpufreq)|  \$(sh /root/cputemp)\"
+sleep 1
+done
+" > /root/cpu-monitoring'
+
+		adb ${ADBOPT} shell "chmod 777 /root/cpu-monitoring; /root/cpu-monitoring"
+
+
+################################################################################
+	else
+
+		echo -e "\
+Freq(MHz) step = 0: ~${CL_GRN}${FREQMIN}${CL_RST}, 1: ${CL_RED}${FREQMAX}${CL_RST}~
+Temp(C) step = 0: ~${CL_BLU}80${CL_RST}, 1: ${CL_CYN}80${CL_RST}~"
+
+		adb ${ADBOPT} shell "\
+while :
+do
+
+	FREQ_MSG=()
+	for CPU in ${CPU_SYS_PATH}/cpu[0-9]*; do
+		FREQ=\$(cat \$CPU/${CPU_FREQ_CUR}) > /dev/null 2>&1
+		let \"FREQ = FREQ / 1000\"
+		if [ \${FREQ} -lt '${FREQMAX}' ]; then
+			FREQ_MSG=(\${FREQ_MSG[@]}\"${CL_GRN}\${FREQ}${CL_RST}\\\\t\")
+		else
+			FREQ_MSG=(\${FREQ_MSG[@]}\"${CL_RED}\${FREQ}${CL_RST}\\\\t\")
+		fi
+	done
+	CPUFREQ_MSG=\"${CL_WHT}Freq(MHz):${CL_RST} \${FREQ_MSG[@]}\"
+
+	if [ ! -z \"${TMU_SYS_PATH}\" ]; then
+		TMU=\$(cat ${TMU_SYS_PATH}) > /dev/null 2>&1
+		[ \${TMU} -gt 1000 ] && let \"TMU = TMU / 1000\"
+		if [ \${TMU} -lt 80 ]; then
+			TMU_MSG=\"${CL_GRN}\${TMU}${CL_RST}\\\\t\"
+		else
+			TMU_MSG=\"${CL_RED}\${TMU}${CL_RST}\\\\t\"
+		fi
+	fi
+	CPUTEMP_MSG=\"${CL_WHT}Temp(C):${CL_RST} \${TMU_MSG}\"
+
+	DATETIME=\"\$(date +%m-%d\ %H:%M:%S)\"
+	UPTIME=\"\$(cat /proc/uptime)\"
+	UPTIME=\${UPTIME/ */}
+	echo \"${CL_YLW}\${DATETIME}${CL_RST}  |  ${CL_WHT}\${UPTIME}${CL_RST}\t  |  \${CPUFREQ_MSG}  |  \${CPUTEMP_MSG}\"
+	sleep 1
+
+done"
+
+
+	fi
+
+	return $?
+}
+
+adb_main $@
+
