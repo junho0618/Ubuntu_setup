@@ -33,7 +33,7 @@ export ARCH=arm
 #export ANDROID_HOME=~/bin/android_sdk
 #export PATH=$ANDROID_HOME/platform-tools:$PATH
 #export PATH=/root/bin/android/android-sdk/platform-tools:$PATH
-export PATH=/root/00_ubuntu-setup/platform-tools:$PATH
+export PATH=/root/00_Ubuntu-Setup/04_platform-tools:$PATH
 
 ###   Android studio   ###
 #export PATH=/root/bin/02_Development_Tools/android-studio/bin:$PATH
