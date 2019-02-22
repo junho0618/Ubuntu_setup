@@ -25,9 +25,9 @@ export ARCH=arm
 
 ###   Java jdk   ###
 #export JAVA_HOME=~/bin/jdk1.6.0
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-#export ANDROID_JAVA_HOME=$JAVA_HOME
-#export PATH=$JAVA_HOME/bin/:$PATH
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export ANDROID_JAVA_HOME=$JAVA_HOME
+export PATH=$JAVA_HOME/bin/:$PATH
 
 ###   Anroid sdk   ###
 #export ANDROID_HOME=~/bin/android_sdk
