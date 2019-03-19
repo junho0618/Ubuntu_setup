@@ -247,7 +247,7 @@ apt_install git-core gnupg flex bison gperf build-essential zip \
 
 # repo
 mkdir -p ~/bin
-curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
 # rules for devices

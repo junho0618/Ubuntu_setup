@@ -1,0 +1,37 @@
+#!/bin/bash
+
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
+CL_LINE=${CL_YLW}"================================================================================"${CL_RST}
+
+echo -e ${CL_LINE}
+echo "fastboot flash kernel"
+fastboot flash kernel out/target/product/gscan3/kernel
+
+echo -e ${CL_LINE}
+echo "fastboot flash ramdisk"
+fastboot flash ramdisk out/target/product/gscan3/ramdisk.img
+
+echo -e ${CL_LINE}
+echo "fastboot flash system"
+fastboot flash system out/target/product/gscan3/system.img
+
+echo -e ${CL_LINE}
+echo "fastboot flash cache"
+fastboot flash cache out/target/product/gscan3/cache.img
+
+echo -e ${CL_LINE}
+echo "fastboot flash userdata"
+fastboot flash userdata out/target/product/gscan3/userdata.img
+
+echo -e ${CL_LINE}
+echo "Reboot"
+fastboot reboot
+
+echo -e ${CL_LINE}
