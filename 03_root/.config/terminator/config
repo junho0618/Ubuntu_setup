@@ -20,11 +20,12 @@
   [[default]]
     scrollbar_position = hidden
     use_system_font = False
-    font = 나눔고딕코딩 10
+    font = D2Coding 12
+    background_image = None
     background_darkness = 0.78
     scrollback_lines = 100000
     background_type = transparent
-    background_image = None
+    active_encodings = EUC-KR, UTF-8, ISO-8859-1
     login_shell = True
     show_titlebar = False
     copy_on_selection = True

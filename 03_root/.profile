@@ -15,6 +15,7 @@ export CPU_COUNT=$(grep processor /proc/cpuinfo | wc -l)
 alias setroot='export CROOT=`pwd` && clear'
 alias goroot='cd $CROOT'
 alias git='LANG=en_US.UTF-8 /usr/bin/git'
+alias foxit='FoxitReader $PWD/$1'
 
 ###   Toolchain   ###
 export ARCH=arm
@@ -48,6 +49,7 @@ export PATH=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.1.0/ide:$PATH
 
 ### Default ###
 export EDITOR=/usr/bin/vi
+export MINICOM='-c on'
 
 ###   CCache   ###
 if [ -d "/usr/lib/ccache" ]; then

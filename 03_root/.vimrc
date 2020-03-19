@@ -1,6 +1,8 @@
 syntax      on                                      "syntax에 맞게 항목 강조
 filetype    on                                      "파일 종류에 따른 구문 강조
-colorscheme elflord                                 "색상 테마를 elfload로 지정
+"colorscheme elflord                                 "색상 테마를 elfload로 지정
+"colorscheme molokai                                 "색상 테마를 molokai로 지정
+color dracula
 
 set autoindent                                      "자동 들여쓰기
 set smartindent                                     "지능적인 들여쓰기

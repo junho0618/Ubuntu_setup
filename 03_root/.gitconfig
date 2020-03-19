@@ -15,6 +15,9 @@
 [merge]
 	tool=bc3
 
+[mergetool "bc3"]
+	path=/usr/bin/bcompare
+
 [mergetool]
 	prompt = false
 
@@ -26,7 +29,7 @@
 	path=/usr/bin/bcompare
 
 [difftool]
-	prompt = false
+	prompt = true
 
 [core]
 	editor = vim
