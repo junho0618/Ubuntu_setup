@@ -1,0 +1,34 @@
+14:22:08 	Upgrade Tool ver 1.21
+14:22:14 	Upgrade Tool ver 1.21
+14:22:14 	Test Device Start
+14:22:14 	Test Device Success
+14:22:14 	Check Chip Start
+14:22:14 	Check Chip Success
+14:22:14 	Get FlashInfo Start
+14:22:14 	<LAYER 1-18> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+14:22:14 	Get FlashInfo Success
+14:22:14 	 Prepare IDB Start
+14:22:14 	<LAYER 1-18> INFO:CS(1)		(14910MB)		(SAMSUNG)
+14:22:14 	Prepare IDB Success
+14:22:14 	Download IDB Start
+14:22:14 	Download IDB Success
+14:22:14 	Reset Device Start
+14:22:16 	Reset Device Success
+14:22:16 	Wait For Loader Start
+14:22:17 	Wait For Loader Success
+14:22:17 	Test Device Start
+14:22:17 	Test Device Success
+14:22:17 	Download Firmware Start
+14:22:17 	<LAYER 1-18> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+14:22:17 	<LAYER 1-18> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+14:22:17 	<LAYER 1-18> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+14:22:17 	<LAYER 1-18> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+14:22:17 	<LAYER 1-18> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+14:22:25 	<LAYER 1-18> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+14:22:25 	<LAYER 1-18> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+14:22:25 	<LAYER 1-18> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+14:22:25 	<LAYER 1-18> INFO:Start to download update,offset=0xca000,size=                                                           49152
+14:22:25 	<LAYER 1-18> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+14:22:34 	Download Firmware Success
+14:22:34 	Reset Device Start
+14:22:36 	Reset Device Success

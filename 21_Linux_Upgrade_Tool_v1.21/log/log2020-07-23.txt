@@ -1,0 +1,445 @@
+15:02:08 	Upgrade Tool ver 1.21
+15:03:02 	Upgrade Tool ver 1.21
+15:03:06 	Upgrade Tool ver 1.21
+15:07:33 	Upgrade Tool ver 1.21
+15:08:08 	Upgrade Tool ver 1.21
+15:08:57 	Upgrade Tool ver 1.21
+15:10:09 	Upgrade Tool ver 1.21
+15:10:20 	Upgrade Tool ver 1.21
+15:10:28 	Upgrade Tool ver 1.21
+15:10:45 	Upgrade Tool ver 1.21
+15:10:56 	Upgrade Tool ver 1.21
+15:10:56 	Test Device Start
+15:10:56 	Test Device Success
+15:10:56 	Check Chip Start
+15:10:56 	Check Chip Success
+15:10:56 	Get FlashInfo Start
+15:10:56 	<LAYER 1-97> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+15:10:56 	Get FlashInfo Success
+15:10:56 	 Prepare IDB Start
+15:10:56 	<LAYER 1-97> INFO:CS(1)		(14910MB)		(SAMSUNG)
+15:10:56 	Prepare IDB Success
+15:10:56 	Download IDB Start
+15:10:56 	Download IDB Success
+15:10:56 	Reset Device Start
+15:10:58 	Reset Device Success
+15:10:58 	Wait For Loader Start
+15:10:58 	Wait For Loader Success
+15:10:58 	Test Device Start
+15:10:58 	Test Device Success
+15:10:58 	Download Firmware Start
+15:10:58 	<LAYER 1-97> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+15:10:59 	<LAYER 1-97> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+15:10:59 	<LAYER 1-97> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+15:10:59 	<LAYER 1-97> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+15:10:59 	<LAYER 1-97> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+15:11:08 	<LAYER 1-97> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+15:11:08 	<LAYER 1-97> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+15:11:08 	<LAYER 1-97> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+15:11:08 	<LAYER 1-97> INFO:Start to download update,offset=0xca000,size=                                                           49152
+15:11:08 	<LAYER 1-97> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+15:11:17 	Download Firmware Success
+15:11:17 	Reset Device Start
+15:11:19 	Reset Device Success
+17:29:12 	Upgrade Tool ver 1.21
+18:25:39 	Upgrade Tool ver 1.21
+18:25:39 	Test Device Start
+18:25:39 	Test Device Success
+18:25:39 	Check Chip Start
+18:25:39 	Check Chip Success
+18:25:39 	Get FlashInfo Start
+18:25:39 	<LAYER 1-112> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+18:25:39 	Get FlashInfo Success
+18:25:39 	 Prepare IDB Start
+18:25:39 	<LAYER 1-112> INFO:CS(1)		(14910MB)		(SAMSUNG)
+18:25:39 	Prepare IDB Success
+18:25:39 	Download IDB Start
+18:25:40 	Download IDB Success
+18:25:40 	Reset Device Start
+18:25:42 	Reset Device Success
+18:25:42 	Wait For Loader Start
+18:25:42 	Wait For Loader Success
+18:25:42 	Test Device Start
+18:25:42 	Test Device Success
+18:25:42 	Download Firmware Start
+18:25:42 	<LAYER 1-112> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+18:25:42 	<LAYER 1-112> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+18:25:42 	<LAYER 1-112> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+18:25:42 	<LAYER 1-112> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+18:25:43 	<LAYER 1-112> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+18:25:52 	<LAYER 1-112> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+18:25:52 	<LAYER 1-112> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+18:25:52 	<LAYER 1-112> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+18:25:52 	<LAYER 1-112> INFO:Start to download update,offset=0xca000,size=                                                           49152
+18:25:52 	<LAYER 1-112> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+18:26:01 	Download Firmware Success
+18:26:01 	Reset Device Start
+18:26:03 	Reset Device Success
+18:32:34 	Upgrade Tool ver 1.21
+18:32:40 	Upgrade Tool ver 1.21
+18:32:48 	Upgrade Tool ver 1.21
+18:32:48 	Test Device Start
+18:32:48 	Test Device Success
+18:32:48 	Check Chip Start
+18:32:48 	Check Chip Success
+18:32:48 	Get FlashInfo Start
+18:32:48 	<LAYER 1-117> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+18:32:48 	Get FlashInfo Success
+18:32:48 	 Prepare IDB Start
+18:32:48 	<LAYER 1-117> INFO:CS(1)		(14910MB)		(SAMSUNG)
+18:32:48 	Prepare IDB Success
+18:32:48 	Download IDB Start
+18:32:49 	Download IDB Success
+18:32:49 	Reset Device Start
+18:32:51 	Reset Device Success
+18:32:51 	Wait For Loader Start
+18:32:51 	Wait For Loader Success
+18:32:51 	Test Device Start
+18:32:51 	Test Device Success
+18:32:51 	Download Firmware Start
+18:32:51 	<LAYER 1-117> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+18:32:51 	<LAYER 1-117> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+18:32:51 	<LAYER 1-117> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+18:32:51 	<LAYER 1-117> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+18:32:52 	<LAYER 1-117> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+18:33:00 	<LAYER 1-117> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+18:33:00 	<LAYER 1-117> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+18:33:00 	<LAYER 1-117> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+18:33:00 	<LAYER 1-117> INFO:Start to download update,offset=0xca000,size=                                                           49152
+18:33:00 	<LAYER 1-117> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+18:33:09 	Download Firmware Success
+18:33:09 	Reset Device Start
+18:33:11 	Reset Device Success
+18:45:39 	Upgrade Tool ver 1.21
+18:45:44 	Upgrade Tool ver 1.21
+18:45:44 	Test Device Start
+18:45:44 	Test Device Success
+18:45:44 	Check Chip Start
+18:45:44 	Check Chip Success
+18:45:44 	Get FlashInfo Start
+18:45:44 	<LAYER 1-123> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+18:45:44 	Get FlashInfo Success
+18:45:44 	 Prepare IDB Start
+18:45:44 	<LAYER 1-123> INFO:CS(1)		(14910MB)		(SAMSUNG)
+18:45:44 	Prepare IDB Success
+18:45:44 	Download IDB Start
+18:45:44 	Download IDB Success
+18:45:44 	Reset Device Start
+18:45:46 	Reset Device Success
+18:45:46 	Wait For Loader Start
+18:45:46 	Wait For Loader Success
+18:45:46 	Test Device Start
+18:45:46 	Test Device Success
+18:45:46 	Download Firmware Start
+18:45:46 	<LAYER 1-123> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+18:45:46 	<LAYER 1-123> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+18:45:46 	<LAYER 1-123> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+18:45:46 	<LAYER 1-123> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+18:45:47 	<LAYER 1-123> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+18:45:56 	<LAYER 1-123> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+18:45:56 	<LAYER 1-123> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+18:45:56 	<LAYER 1-123> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+18:45:56 	<LAYER 1-123> INFO:Start to download update,offset=0xca000,size=                                                           49152
+18:45:56 	<LAYER 1-123> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+18:46:05 	Download Firmware Success
+18:46:05 	Reset Device Start
+18:46:07 	Reset Device Success
+18:51:26 	Upgrade Tool ver 1.21
+18:51:39 	Upgrade Tool ver 1.21
+18:51:39 	Test Device Start
+18:51:39 	Test Device Success
+18:51:39 	Check Chip Start
+18:51:39 	Check Chip Success
+18:51:39 	Get FlashInfo Start
+18:51:39 	<LAYER 1-126> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+18:51:39 	Get FlashInfo Success
+18:51:39 	 Prepare IDB Start
+18:51:39 	<LAYER 1-126> INFO:CS(1)		(14910MB)		(SAMSUNG)
+18:51:39 	Prepare IDB Success
+18:51:39 	Download IDB Start
+18:51:39 	Download IDB Success
+18:51:39 	Reset Device Start
+18:51:41 	Reset Device Success
+18:51:41 	Wait For Loader Start
+18:51:42 	Wait For Loader Success
+18:51:42 	Test Device Start
+18:51:42 	Test Device Success
+18:51:42 	Download Firmware Start
+18:51:42 	<LAYER 1-126> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+18:51:42 	<LAYER 1-126> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+18:51:42 	<LAYER 1-126> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+18:51:42 	<LAYER 1-126> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+18:51:43 	<LAYER 1-126> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+18:51:50 	<LAYER 1-126> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+18:51:50 	<LAYER 1-126> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+18:51:50 	<LAYER 1-126> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+18:51:50 	<LAYER 1-126> INFO:Start to download update,offset=0xca000,size=                                                           49152
+18:51:50 	<LAYER 1-126> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+18:51:59 	Download Firmware Success
+18:51:59 	Reset Device Start
+18:52:01 	Reset Device Success
+19:10:15 	Upgrade Tool ver 1.21
+19:10:15 	Test Device Start
+19:10:15 	Test Device Success
+19:10:15 	Check Chip Start
+19:10:15 	Check Chip Success
+19:10:15 	Get FlashInfo Start
+19:10:15 	<LAYER 1-7> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:10:15 	Get FlashInfo Success
+19:10:15 	 Prepare IDB Start
+19:10:15 	<LAYER 1-7> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:10:15 	Prepare IDB Success
+19:10:15 	Download IDB Start
+19:10:15 	Download IDB Success
+19:10:15 	Reset Device Start
+19:10:17 	Reset Device Success
+19:10:17 	Wait For Loader Start
+19:10:18 	Wait For Loader Success
+19:10:18 	Test Device Start
+19:10:18 	Test Device Success
+19:10:18 	Download Firmware Start
+19:10:18 	<LAYER 1-7> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:10:18 	<LAYER 1-7> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:10:18 	<LAYER 1-7> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:10:18 	<LAYER 1-7> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:10:19 	<LAYER 1-7> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:10:26 	<LAYER 1-7> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:10:26 	<LAYER 1-7> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:10:26 	<LAYER 1-7> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:10:26 	<LAYER 1-7> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:10:26 	<LAYER 1-7> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:10:35 	Download Firmware Success
+19:10:35 	Reset Device Start
+19:10:37 	Reset Device Success
+19:32:16 	Upgrade Tool ver 1.21
+19:32:16 	Test Device Start
+19:32:16 	Test Device Success
+19:32:16 	Check Chip Start
+19:32:16 	Check Chip Success
+19:32:16 	Get FlashInfo Start
+19:32:16 	<LAYER 1-15> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:32:16 	Get FlashInfo Success
+19:32:16 	 Prepare IDB Start
+19:32:16 	<LAYER 1-15> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:32:16 	Prepare IDB Success
+19:32:16 	Download IDB Start
+19:32:16 	Download IDB Success
+19:32:16 	Reset Device Start
+19:32:18 	Reset Device Success
+19:32:18 	Wait For Loader Start
+19:32:18 	Wait For Loader Success
+19:32:18 	Test Device Start
+19:32:18 	Test Device Success
+19:32:18 	Download Firmware Start
+19:32:18 	<LAYER 1-15> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:32:19 	<LAYER 1-15> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:32:19 	<LAYER 1-15> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:32:19 	<LAYER 1-15> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:32:19 	<LAYER 1-15> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:32:27 	<LAYER 1-15> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:32:27 	<LAYER 1-15> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:32:27 	<LAYER 1-15> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:32:27 	<LAYER 1-15> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:32:27 	<LAYER 1-15> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:32:36 	Download Firmware Success
+19:32:36 	Reset Device Start
+19:32:38 	Reset Device Success
+19:45:22 	Upgrade Tool ver 1.21
+19:45:22 	Test Device Start
+19:45:22 	Test Device Success
+19:45:22 	Check Chip Start
+19:45:22 	Check Chip Success
+19:45:22 	Get FlashInfo Start
+19:45:22 	<LAYER 1-18> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:45:22 	Get FlashInfo Success
+19:45:22 	 Prepare IDB Start
+19:45:22 	<LAYER 1-18> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:45:22 	Prepare IDB Success
+19:45:22 	Download IDB Start
+19:45:23 	Download IDB Success
+19:45:23 	Reset Device Start
+19:45:25 	Reset Device Success
+19:45:25 	Wait For Loader Start
+19:45:25 	Wait For Loader Success
+19:45:25 	Test Device Start
+19:45:25 	Test Device Success
+19:45:25 	Download Firmware Start
+19:45:25 	<LAYER 1-18> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:45:25 	<LAYER 1-18> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:45:25 	<LAYER 1-18> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:45:25 	<LAYER 1-18> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:45:26 	<LAYER 1-18> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:45:34 	<LAYER 1-18> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:45:34 	<LAYER 1-18> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:45:34 	<LAYER 1-18> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:45:34 	<LAYER 1-18> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:45:34 	<LAYER 1-18> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:45:42 	Download Firmware Success
+19:45:42 	Reset Device Start
+19:45:44 	Reset Device Success
+19:50:29 	Upgrade Tool ver 1.21
+19:50:29 	Test Device Start
+19:50:29 	Test Device Success
+19:50:29 	Check Chip Start
+19:50:29 	Check Chip Success
+19:50:29 	Get FlashInfo Start
+19:50:29 	<LAYER 1-25> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:50:29 	Get FlashInfo Success
+19:50:29 	 Prepare IDB Start
+19:50:29 	<LAYER 1-25> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:50:29 	Prepare IDB Success
+19:50:29 	Download IDB Start
+19:50:29 	Download IDB Success
+19:50:29 	Reset Device Start
+19:50:31 	Reset Device Success
+19:50:31 	Wait For Loader Start
+19:50:31 	Wait For Loader Success
+19:50:31 	Test Device Start
+19:50:31 	Test Device Success
+19:50:31 	Download Firmware Start
+19:50:31 	<LAYER 1-25> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:50:32 	<LAYER 1-25> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:50:32 	<LAYER 1-25> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:50:32 	<LAYER 1-25> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:50:32 	<LAYER 1-25> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:50:40 	<LAYER 1-25> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:50:40 	<LAYER 1-25> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:50:40 	<LAYER 1-25> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:50:40 	<LAYER 1-25> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:50:40 	<LAYER 1-25> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:50:49 	Download Firmware Success
+19:50:49 	Reset Device Start
+19:50:58 	Upgrade Tool ver 1.21
+19:50:58 	Test Device Start
+19:50:58 	Test Device Success
+19:50:58 	Check Chip Start
+19:50:58 	Check Chip Success
+19:50:58 	Get FlashInfo Start
+19:50:58 	<LAYER 1-27> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:50:58 	Get FlashInfo Success
+19:50:58 	 Prepare IDB Start
+19:50:58 	<LAYER 1-27> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:50:58 	Prepare IDB Success
+19:50:58 	Download IDB Start
+19:50:59 	Download IDB Success
+19:50:59 	Reset Device Start
+19:51:01 	Reset Device Success
+19:51:01 	Wait For Loader Start
+19:51:01 	Wait For Loader Success
+19:51:01 	Test Device Start
+19:51:01 	Test Device Success
+19:51:01 	Download Firmware Start
+19:51:01 	<LAYER 1-27> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:51:01 	<LAYER 1-27> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:51:01 	<LAYER 1-27> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:51:01 	<LAYER 1-27> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:51:02 	<LAYER 1-27> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:51:11 	<LAYER 1-27> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:51:11 	<LAYER 1-27> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:51:11 	<LAYER 1-27> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:51:11 	<LAYER 1-27> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:51:11 	<LAYER 1-27> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:51:19 	Download Firmware Success
+19:51:19 	Reset Device Start
+19:51:21 	Reset Device Success
+19:57:36 	Upgrade Tool ver 1.21
+19:57:36 	Test Device Start
+19:57:36 	Test Device Success
+19:57:36 	Check Chip Start
+19:57:36 	Check Chip Success
+19:57:36 	Get FlashInfo Start
+19:57:36 	<LAYER 1-34> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+19:57:36 	Get FlashInfo Success
+19:57:36 	 Prepare IDB Start
+19:57:36 	<LAYER 1-34> INFO:CS(1)		(14910MB)		(SAMSUNG)
+19:57:36 	Prepare IDB Success
+19:57:36 	Download IDB Start
+19:57:36 	Download IDB Success
+19:57:36 	Reset Device Start
+19:57:38 	Reset Device Success
+19:57:38 	Wait For Loader Start
+19:57:39 	Wait For Loader Success
+19:57:39 	Test Device Start
+19:57:39 	Test Device Success
+19:57:39 	Download Firmware Start
+19:57:39 	<LAYER 1-34> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+19:57:39 	<LAYER 1-34> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+19:57:39 	<LAYER 1-34> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+19:57:39 	<LAYER 1-34> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+19:57:40 	<LAYER 1-34> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+19:57:49 	<LAYER 1-34> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+19:57:49 	<LAYER 1-34> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+19:57:49 	<LAYER 1-34> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+19:57:49 	<LAYER 1-34> INFO:Start to download update,offset=0xca000,size=                                                           49152
+19:57:49 	<LAYER 1-34> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+19:57:57 	Download Firmware Success
+19:57:57 	Reset Device Start
+19:57:59 	Reset Device Success
+20:03:15 	Upgrade Tool ver 1.21
+20:03:17 	Upgrade Tool ver 1.21
+20:03:26 	Upgrade Tool ver 1.21
+20:03:26 	Test Device Start
+20:03:26 	Test Device Success
+20:03:26 	Check Chip Start
+20:03:26 	Check Chip Success
+20:03:26 	Get FlashInfo Start
+20:03:26 	<LAYER 1-37> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+20:03:26 	Get FlashInfo Success
+20:03:26 	 Prepare IDB Start
+20:03:26 	<LAYER 1-37> INFO:CS(1)		(14910MB)		(SAMSUNG)
+20:03:26 	Prepare IDB Success
+20:03:26 	Download IDB Start
+20:03:26 	Download IDB Success
+20:03:26 	Reset Device Start
+20:03:28 	Reset Device Success
+20:03:28 	Wait For Loader Start
+20:03:28 	Wait For Loader Success
+20:03:28 	Test Device Start
+20:03:28 	Test Device Success
+20:03:28 	Download Firmware Start
+20:03:28 	<LAYER 1-37> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+20:03:29 	<LAYER 1-37> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+20:03:29 	<LAYER 1-37> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+20:03:29 	<LAYER 1-37> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+20:03:29 	<LAYER 1-37> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+20:03:38 	<LAYER 1-37> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+20:03:38 	<LAYER 1-37> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+20:03:38 	<LAYER 1-37> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+20:03:38 	<LAYER 1-37> INFO:Start to download update,offset=0xca000,size=                                                           49152
+20:03:38 	<LAYER 1-37> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+20:03:47 	Download Firmware Success
+20:03:47 	Reset Device Start
+20:03:49 	Reset Device Success
+20:14:42 	Upgrade Tool ver 1.21
+20:14:42 	Test Device Start
+20:14:42 	Test Device Success
+20:14:42 	Check Chip Start
+20:14:42 	Check Chip Success
+20:14:42 	Get FlashInfo Start
+20:14:42 	<LAYER 1-41> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+20:14:42 	Get FlashInfo Success
+20:14:42 	 Prepare IDB Start
+20:14:42 	<LAYER 1-41> INFO:CS(1)		(14910MB)		(SAMSUNG)
+20:14:42 	Prepare IDB Success
+20:14:42 	Download IDB Start
+20:14:43 	Download IDB Success
+20:14:43 	Reset Device Start
+20:14:45 	Reset Device Success
+20:14:45 	Wait For Loader Start
+20:14:45 	Wait For Loader Success
+20:14:45 	Test Device Start
+20:14:45 	Test Device Success
+20:14:45 	Download Firmware Start
+20:14:45 	<LAYER 1-41> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+20:14:45 	<LAYER 1-41> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+20:14:45 	<LAYER 1-41> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+20:14:45 	<LAYER 1-41> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+20:14:46 	<LAYER 1-41> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+20:14:54 	<LAYER 1-41> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+20:14:54 	<LAYER 1-41> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+20:14:54 	<LAYER 1-41> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+20:14:54 	<LAYER 1-41> INFO:Start to download update,offset=0xca000,size=                                                           49152
+20:14:54 	<LAYER 1-41> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+20:15:03 	Download Firmware Success
+20:15:03 	Reset Device Start
+20:15:05 	Reset Device Success

@@ -1,0 +1,40 @@
+10:06:04 	Upgrade Tool ver 1.21
+10:06:15 	Upgrade Tool ver 1.21
+10:06:28 	Upgrade Tool ver 1.21
+10:06:29 	Upgrade Tool ver 1.21
+10:06:35 	Upgrade Tool ver 1.21
+10:06:35 	Upgrade Tool ver 1.21
+10:06:53 	Upgrade Tool ver 1.21
+10:07:00 	Upgrade Tool ver 1.21
+10:07:00 	Test Device Start
+10:07:00 	Test Device Success
+10:07:00 	Check Chip Start
+10:07:00 	Check Chip Success
+10:07:00 	Get FlashInfo Start
+10:07:00 	<LAYER 1-13> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+10:07:00 	Get FlashInfo Success
+10:07:00 	 Prepare IDB Start
+10:07:00 	<LAYER 1-13> INFO:CS(1)		(14910MB)		(SAMSUNG)
+10:07:00 	Prepare IDB Success
+10:07:00 	Download IDB Start
+10:07:00 	Download IDB Success
+10:07:00 	Reset Device Start
+10:07:02 	Reset Device Success
+10:07:02 	Wait For Loader Start
+10:07:02 	Wait For Loader Success
+10:07:02 	Test Device Start
+10:07:02 	Test Device Success
+10:07:02 	Download Firmware Start
+10:07:02 	<LAYER 1-13> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+10:07:03 	<LAYER 1-13> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+10:07:03 	<LAYER 1-13> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+10:07:03 	<LAYER 1-13> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+10:07:03 	<LAYER 1-13> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+10:07:12 	<LAYER 1-13> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+10:07:12 	<LAYER 1-13> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+10:07:12 	<LAYER 1-13> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+10:07:12 	<LAYER 1-13> INFO:Start to download update,offset=0xca000,size=                                                           49152
+10:07:12 	<LAYER 1-13> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+10:07:21 	Download Firmware Success
+10:07:21 	Reset Device Start
+10:07:23 	Reset Device Success

@@ -17,6 +17,7 @@ alias goroot='cd $CROOT'
 alias git='LANG=en_US.UTF-8 /usr/bin/git'
 alias foxit='FoxitReader $PWD/$1'
 
+MY_HOME=/home/juno
 ###   Toolchain   ###
 export ARCH=arm
 #export CROSS_COMPILE_PATH=/usr/local/arm/arm-eabi-4.6/bin
@@ -34,18 +35,21 @@ export ARCH=arm
 #export ANDROID_HOME=~/bin/android_sdk
 #export PATH=$ANDROID_HOME/platform-tools:$PATH
 #export PATH=/root/bin/android/android-sdk/platform-tools:$PATH
-export PATH=/root/00_Ubuntu-Setup/04_platform-tools:$PATH
+#export PATH=/root/00_Ubuntu_setup/04_platform-tools:$PATH
 
 ###   Android studio   ###
 #export PATH=/root/bin/02_Development_Tools/android-studio/bin:$PATH
 
 ###   PATH   ###
-export PATH=/root/bin:$PATH
-export PATH=/root/00_Ubuntu-Setup/01_bin:$PATH
-export PATH=/root/00_Ubuntu-Setup/02_scripts:$PATH
+export PATH=${MY_HOME}/bin:$PATH
+export PATH=${MY_HOME}/00_Ubuntu_setup/01_bin:$PATH
+export PATH=${MY_HOME}/00_Ubuntu_setup/02_scripts:$PATH
 
 ### TrueStudio   ###
-export PATH=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.1.0/ide:$PATH
+#export PATH=/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.1.0/ide:$PATH
+
+### RockChip Linux download   ###
+export PATH=/home/juno/00_Ubuntu_setup/21_Linux_Upgrade_Tool_v1.21:$PATH
 
 ### Default ###
 export EDITOR=/usr/bin/vi

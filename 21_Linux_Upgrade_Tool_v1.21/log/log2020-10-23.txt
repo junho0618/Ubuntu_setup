@@ -1,0 +1,107 @@
+09:22:21 	Upgrade Tool ver 1.21
+09:22:25 	Upgrade Tool ver 1.21
+09:22:49 	Upgrade Tool ver 1.21
+09:22:52 	Upgrade Tool ver 1.21
+09:22:52 	Test Device Start
+09:22:52 	Test Device Success
+09:22:52 	Check Chip Start
+09:22:52 	Check Chip Success
+09:22:52 	Get FlashInfo Start
+09:22:52 	<LAYER 1-22> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+09:22:52 	Get FlashInfo Success
+09:22:52 	 Prepare IDB Start
+09:22:52 	<LAYER 1-22> INFO:CS(1)		(14910MB)		(SAMSUNG)
+09:22:52 	Prepare IDB Success
+09:22:52 	Download IDB Start
+09:22:52 	Download IDB Success
+09:22:52 	Reset Device Start
+09:22:54 	Reset Device Success
+09:22:54 	Wait For Loader Start
+09:22:55 	Wait For Loader Success
+09:22:55 	Test Device Start
+09:22:55 	Test Device Success
+09:22:55 	Download Firmware Start
+09:22:55 	<LAYER 1-22> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+09:22:55 	<LAYER 1-22> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+09:22:55 	<LAYER 1-22> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+09:22:55 	<LAYER 1-22> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+09:22:56 	<LAYER 1-22> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+09:23:05 	<LAYER 1-22> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+09:23:05 	<LAYER 1-22> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+09:23:05 	<LAYER 1-22> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+09:23:05 	<LAYER 1-22> INFO:Start to download update,offset=0xca000,size=                                                           49152
+09:23:05 	<LAYER 1-22> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+09:23:13 	Download Firmware Success
+09:23:13 	Reset Device Start
+09:23:15 	Reset Device Success
+16:45:12 	Upgrade Tool ver 1.21
+16:45:12 	Test Device Start
+16:45:12 	Test Device Success
+16:45:12 	Check Chip Start
+16:45:12 	Check Chip Success
+16:45:12 	Get FlashInfo Start
+16:45:12 	<LAYER 1-75> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+16:45:12 	Get FlashInfo Success
+16:45:12 	 Prepare IDB Start
+16:45:12 	<LAYER 1-75> INFO:CS(1)		(14910MB)		(SAMSUNG)
+16:45:12 	Prepare IDB Success
+16:45:12 	Download IDB Start
+16:45:12 	Download IDB Success
+16:45:12 	Reset Device Start
+16:45:14 	Reset Device Success
+16:45:14 	Wait For Loader Start
+16:45:15 	Wait For Loader Success
+16:45:15 	Test Device Start
+16:45:15 	Test Device Success
+16:45:15 	Download Firmware Start
+16:45:15 	<LAYER 1-75> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+16:45:15 	<LAYER 1-75> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+16:45:15 	<LAYER 1-75> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+16:45:15 	<LAYER 1-75> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+16:45:16 	<LAYER 1-75> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+16:45:17 	Error:RKU_Write failed,err=-99
+16:45:17 	<LAYER 1-75> ERROR:RKA_File_Download-->RKU_WriteLBA failed,Written(25165824),RetCode(0)
+16:45:17 	<LAYER 1-75> ERROR:DownloadImage-->RKA_File_Download failed(linuxroot1)
+16:45:17 	Download Firmware Fail
+16:45:27 	Upgrade Tool ver 1.21
+16:45:27 	Test Device Start
+16:45:29 	Error:RKU_Read failed,err=-99
+16:45:29 	<LAYER 1-76> ERROR:TestDevice-->RKU_TestDeviceReady failed,RetCode(-4)
+16:45:30 	Error:RKU_Write failed,err=-4
+16:45:30 	<LAYER 1-76> ERROR:TestDevice-->RKU_TestDeviceReady failed,RetCode(-3)
+16:45:31 	Error:RKU_Write failed,err=-4
+16:45:31 	<LAYER 1-76> ERROR:TestDevice-->RKU_TestDeviceReady failed,RetCode(-3)
+16:45:32 	Test Device Fail
+16:45:35 	Upgrade Tool ver 1.21
+16:45:35 	Test Device Start
+16:45:35 	Test Device Success
+16:45:35 	Check Chip Start
+16:45:35 	Check Chip Success
+16:45:35 	Get FlashInfo Start
+16:45:35 	<LAYER 1-78> INFO:FlashInfo: 0 F0 D1 1 0 4 4 0 28 0 1
+16:45:35 	Get FlashInfo Success
+16:45:35 	 Prepare IDB Start
+16:45:35 	<LAYER 1-78> INFO:CS(1)		(14910MB)		(SAMSUNG)
+16:45:35 	Prepare IDB Success
+16:45:35 	Download IDB Start
+16:45:35 	Download IDB Success
+16:45:35 	Reset Device Start
+16:45:37 	Reset Device Success
+16:45:37 	Wait For Loader Start
+16:45:38 	Wait For Loader Success
+16:45:38 	Test Device Start
+16:45:38 	Test Device Success
+16:45:38 	Download Firmware Start
+16:45:38 	<LAYER 1-78> INFO:Start to download uboot,offset=0x2000,size=                                                         4194304
+16:45:38 	<LAYER 1-78> INFO:Start to download misc,offset=0x4000,size=                                                           49152
+16:45:38 	<LAYER 1-78> INFO:Start to download resource1,offset=0x6000,size=                                                         1003008
+16:45:38 	<LAYER 1-78> INFO:Start to download boot1,offset=0x8000,size=                                                         7651328
+16:45:38 	<LAYER 1-78> INFO:Start to download linuxroot1,offset=0x18000,size=                                                       134217728
+16:45:46 	<LAYER 1-78> INFO:Start to download resource2,offset=0x68000,size=                                                           49152
+16:45:46 	<LAYER 1-78> INFO:Start to download boot2,offset=0x6a000,size=                                                           49152
+16:45:46 	<LAYER 1-78> INFO:Start to download linuxroot2,offset=0x7a000,size=                                                           49152
+16:45:46 	<LAYER 1-78> INFO:Start to download update,offset=0xca000,size=                                                           49152
+16:45:46 	<LAYER 1-78> INFO:Start to download user,offset=0x20a000,size=                                                           49152
+16:45:55 	Download Firmware Success
+16:45:55 	Reset Device Start
+16:45:57 	Reset Device Success
