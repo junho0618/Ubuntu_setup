@@ -1,0 +1,58 @@
+11:03:24 	Upgrade Tool v1.65
+
+11:03:24 	Current process in /home/mm/00_ubuntu_setup/01_bin
+11:03:24 	Not found config.ini,in the /home/mm/.config/upgrade_tool/config.ini
+12:50:14 	Upgrade Tool v1.65
+
+12:50:14 	Current process in /home/mm/00_ubuntu_setup/01_bin
+12:50:14 	Not found config.ini,in the /home/mm/.config/upgrade_tool/config.ini
+12:50:46 	Upgrade Tool v1.65
+
+12:50:46 	Current process in /home/mm/00_ubuntu_setup/01_bin
+12:50:46 	Not found config.ini,in the /home/mm/.config/upgrade_tool/config.ini
+12:50:46 	Command Line: upgrade_tool uf update.img
+12:50:46 	Current Device Location ID:3b1
+12:50:46 	Download Boot Start
+12:50:47 	Download Boot Success
+12:50:47 	Wait For Maskrom Start
+12:50:49 	Wait For Maskrom Success
+12:50:49 	Error:libusb_release_interface failed,err=-4
+12:50:49 	Test Device Start
+12:50:49 	Test Device Success
+12:50:49 	Check Chip Start
+12:50:49 	Check Chip Success
+12:50:49 	Get FlashInfo Start
+12:50:49 	INFO:FlashInfo: 0 E0 A3 3 0 4 4 0 28 0 1
+12:50:49 	Get FlashInfo Success
+12:50:49 	 Prepare IDB Start
+12:50:49 	INFO:CS(1)		(29820MB)		(SAMSUNG)
+12:50:49 	Prepare IDB Success
+12:50:49 	Download IDB Start
+12:50:49 	INFO:DownloadIDBlock-->New IDB
+12:50:49 	Download IDB Success
+12:50:49 	Download Firmware Start
+12:50:49 	INFO:FlashInfo: 0 E0 A3 3 0 4 4 0 28 0 1
+12:50:49 	INFO:Start download image,total=3372066927,band=64,DirectLBA=1,First4Access=1,Gpt=1
+12:50:49 	INFO:Start to download uboot,offset=0x4000,size=4194304
+12:50:49 	INFO:Start to download misc,offset=0x8000,size=49152
+12:50:49 	INFO:Start to download boot,offset=0xc800,size=32933888
+12:50:50 	INFO:Start to download dtbo,offset=0xa000,size=623
+12:50:50 	INFO:Start to download vbmeta,offset=0xc000,size=4096
+12:50:50 	INFO:Start to download recovery,offset=0x20800,size=70633472
+12:50:52 	INFO:Start to download baseparameter,offset=0x1d8800,size=1048576
+12:50:52 	INFO:Start to download super,offset=0x1d9000,size=3263168512
+12:51:43 	ERROR:RKA_Gpt_Download-->compare gpt backup failed
+12:51:43 	ERROR:DownloadImage-->RKA_Gpt_Check failed
+12:51:43 	Download Firmware Fail
+12:51:43 	Command mode out
+12:52:12 	Upgrade Tool v1.65
+
+12:52:12 	Current process in /home/mm/00_ubuntu_setup/01_bin
+12:52:12 	Not found config.ini,in the /home/mm/.config/upgrade_tool/config.ini
+12:52:12 	Command Line: upgrade_tool uf update.img
+12:52:13 	Current Device Location ID:3b1
+12:52:13 	Download Boot Start
+12:52:18 	Error:RKU_DeviceRequest-->DeviceRequest vendor=0x471 failed,err=-7
+12:52:18 	ERROR:DownloadBoot-->Boot_VendorRequest471 failed,index(0)
+12:52:18 	Download Boot Fail
+12:52:18 	Command mode out

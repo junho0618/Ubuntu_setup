@@ -64,6 +64,7 @@ eval "find ${dir} \
 	-name '.repo' -prune -o \
 	-name '.git' -prune -o \
 	-name '.svn' -prune -o \
+	-name 'out' -prune -o \
 	-name 'tags' -prune -o \
 	-name 'Debug' -prune -o \
 	-name '*.o' -prune -o \
@@ -74,6 +75,7 @@ eval "find ${dir} \
 	-name '*.cmd' -prune -o \
 	-name '*.mod.c' -prune -o \
 	-name '*.js' -prune -o \
+	-name '*.tmp' -prune -o \
 	-type f ${opt} \
 	| xargs -0 grep --color -n '$keyword' ."
 

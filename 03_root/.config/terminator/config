@@ -3,7 +3,10 @@
   enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   suppress_multiple_term_dialog = True
+  tab_position = hidden
+  title_font = D2Coding 10
   title_transmit_bg_color = "#d30102"
+  title_use_system_font = False
   window_state = maximise
 [keybindings]
   broadcast_all = <Primary>grave
@@ -78,10 +81,9 @@
   [[default]]
     active_encodings = EUC-KR, UTF-8, ISO-8859-1
     background_darkness = 0.78
-    background_type = transparent
+    background_image = None
     copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = D2Coding 9
+    font = D2Coding 10
     login_shell = True
     scrollback_lines = 100000
     scrollbar_position = hidden
@@ -91,11 +93,11 @@
   [[Ocean dark]]
     active_encodings = EUC-KR, UTF-8, ISO-8859-1
     background_color = "#1c1f27"
-    background_darkness = 0.78
-    background_type = transparent
+    background_darkness = 0.87
+    background_image = None
     copy_on_selection = True
     cursor_color = "#a0a4b2"
-    font = D2Coding 9
+    font = D2Coding 10
     foreground_color = "#979cac"
     login_shell = True
     palette = "#4f4f4f:#af4b57:#afd383:#e5c079:#7d90a4:#a4799d:#85a6a5:#eeedee:#7b7b7b:#af4b57:#ceffab:#fffecc:#b5dcfe:#fb9bfe:#dfdffd:#fefffe"
@@ -107,11 +109,11 @@
   [[Violet Dark]]
     active_encodings = EUC-KR, UTF-8, ISO-8859-1
     background_color = "#1c1d1f"
-    background_darkness = 0.78
-    background_type = transparent
+    background_darkness = 0.93
+    background_image = None
     copy_on_selection = True
     cursor_color = "#708284"
-    font = D2Coding 9
+    font = D2Coding 10
     foreground_color = "#708284"
     login_shell = True
     palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#c9c6bd:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"

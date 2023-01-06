@@ -25,7 +25,7 @@ CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
 TOOLCHAIN_BASE=(
-"/root/02_compiler"
+"/home/mm/02_Compiler"
 )
 
 function _cc_setup() {
