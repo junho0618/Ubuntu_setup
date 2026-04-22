@@ -76,6 +76,7 @@ eval "find ${dir} \
 	-name '*.mod.c' -prune -o \
 	-name '*.js' -prune -o \
 	-name '*.tmp' -prune -o \
+	-name '.depend' -prune -o \
 	-type f ${opt} \
 	| xargs -0 grep --color -n '$keyword' ."
 

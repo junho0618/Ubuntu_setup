@@ -25,7 +25,8 @@ CL_CYN="\033[36m"
 CL_RST="\033[0m"
 
 TOOLCHAIN_BASE=(
-"/home/mm/02_Compiler"
+#"/home/mm/02_Compiler"
+"/home/jhlee/02_Compiler"
 )
 
 function _cc_setup() {
@@ -69,7 +70,7 @@ if [ -z "${CC_CHECK}" ] || [ "${CC_CHECK}" != "${CC_FULL}" ]; then
 	export PATH=${CC_PATH}:${PATH}
 fi
 
-export "ARCH=arm"
+export "ARCH=arm64"
 echo "ARCH=${ARCH}"
 export "CROSS_COMPILE_PATH=${CC_PATH}"
 echo "CROSS_COMPILE_PATH=${CC_PATH}"

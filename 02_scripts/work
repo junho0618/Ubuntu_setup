@@ -1,0 +1,49 @@
+#!/bin/bash
+
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
+CL_LINE=${CL_YLW}"================================================================================"${CL_RST}
+
+function print_usage()
+{
+    echo "set work directory."
+}
+
+function dr()
+{
+    export "WORK_DIR=/home/jhlee/01_work/10_Solutions/01_DR_System/work/app"
+}
+
+function bsp()
+{
+    export "WORK_DIR=/home/jhlee/01_work/02_Qualcomm/work/LE.QCLINUX.1.0.r1"
+}
+
+function mcu()
+{
+    export "WORK_DIR=/home/jhlee/01_work/11_MCU/01_SOT2100/work"
+}
+
+function bip()
+{
+    export "WORK_DIR=/home/jhlee/01_work/51_IX3000/bipology/app"
+}
+
+if [ $# -eq 0 ]; then
+    print_usage
+else
+    clear
+    echo -e ${CL_LINE}
+    $1
+    echo ${WORK_DIR}
+    export CROOT=${WORK_DIR}
+    cd ${WORK_DIR}
+    echo -e ${CL_LINE}
+fi
+

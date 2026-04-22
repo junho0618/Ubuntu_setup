@@ -1,0 +1,21 @@
+#!/bin/bash
+
+CL_RED="\033[31m"
+CL_GRN="\033[32m"
+CL_YLW="\033[33m"
+CL_BLU="\033[34m"
+CL_MAG="\033[35m"
+CL_CYN="\033[36m"
+CL_RST="\033[0m"
+
+CL_LINE=${CL_YLW}"================================================================================"${CL_RST}
+
+#WORK_DIR="/home/jhlee/01_work/02_Qualcomm/01_SOT2100/LE.QCLINUX.1.0.r1"
+#export WORK_DIR="/home/jhlee/01_work/10_Solutions/01_DR_System/01_work/app"
+export WORK_DIR="/home/jhlee/01_work/10_Solutions/01_DR_System/01_SOT2100_QCS6490_WS/app"
+echo -e ${CL_LINE}
+echo 'Set WORK_DIR =' $WORK_DIR
+export CROOT=${WORK_DIR}
+cd ${WORK_DIR}
+echo -e ${CL_LINE}
+
